@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "4ef5000c-457c-4f5e-9f84-dd27db524d8c",
+		"name": "MongoDB API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/countries/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"country\": \"Prusia\", \n\t\"population\": 12345, \n\t\"continent\": \"Europe\", \n\t\"lifeExpectancy\": 40, \n\t\"purchasingPower\": 54.55\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/countries/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						""
+					]
+				},
+				"description": "Insert a document into 'coutries' mongodb collection"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/countries/Prusia",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/countries/Prusia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"Prusia"
+					]
+				},
+				"description": "Get a url specified document from 'countries' mongodb collection"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/countries/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/countries/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						""
+					]
+				},
+				"description": "get all the documents from mongodb 'countries' collection"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/countries/Prusia",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"population\": 54321, \n\t\"continent\": \"Europe\", \n\t\"lifeExpectancy\": 450, \n\t\"purchasingPower\": 75.74\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/countries/Prusia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"Prusia"
+					]
+				},
+				"description": "Update the url specified country in the 'countries' mongodb collection"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/countries/Prusia",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/Prusia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"Prusia"
+					]
+				},
+				"description": "Delete the url specified country from 'countries' mongodb collection"
+			},
+			"response": []
+		}
+	]
+}
