@@ -1,5 +1,5 @@
 # ExpressSimpleApi
-An easy example of how a simple CRUD API to a mongodb works, using NodeJS and Express 
+An easy example of how a basic CRUD API to a mongodb works, using NodeJS and Express 
 
 # Steps to test the app.
 1. Create a database on Mongo called 'world' with a collection called 'countries'. If possible use MongoDB Compass Community, and rund the db server on localhost:27017.
